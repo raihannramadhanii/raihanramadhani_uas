@@ -24,7 +24,7 @@ class pendaftaranController extends Controller
     public function create()
     {
         //menampilkan form tambah
-        return view('Pendaftaran.form');
+        return view('Pendaftaran.tambah');
     }
 
     /**

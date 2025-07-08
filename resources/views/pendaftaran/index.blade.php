@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('title', 'Data Pendaftar')
 
@@ -34,27 +34,27 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @forelse ($pendaftaran as $index => $data) --}}
+                @forelse ($pendaftaran as $index => $data)
                 <tr>
-                    {{-- <th scope="row">{{ $index + 1 }}</th>
+                    <th scope="row">{{ $index + 1 }}</th>
                     <td>{{ $data->nm_pendaftar }}</td>
                     <td>{{ $data->al_pendaftar }}</td>
-                    <td>{{ $data->hp_pendaftar }}</td> --}}
-                    <td>1</td>
+                    <td>{{ $data->hp_pendaftar }}</td>
+                    {{-- <td>1</td>
                     <td>Dini</td>
                     <td>Mibo</td>
-                    <td>098765</td>
+                    <td>098765</td> --}}
                     <td class="text-end">
-                        <a href="{{ url('/pendaftaran/') }}" class="btn btn-warning btn-sm">
+                        <a href="{{ url('/pendaftaran') }}" class="btn btn-warning btn-sm">
                             <i class="fa fa-circle-info"></i>
                         </a>
                         <a href="{{ url('/pendaftaran/edit') }}" class="btn btn-info btn-sm">
-                            <i class="fa fa-pen-to-square"></i>
+                            <i class="fa-solid fa-pen-to-square"></i>
                         </a>
 
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                            <i class="fa fa-trash"></i>
+                            <i class="fa-solid fa-folder-open"></i>
                         </button>
 
                         <!-- Modal -->
@@ -81,11 +81,11 @@
                         </div>
                     </td>
                 </tr>
-                {{-- @empty --}}
+                @empty
                 <tr>
                     <td colspan="5" class="text-center">Data tidak tersedia.</td>
                 </tr>
-                {{-- @endforelse --}}
+                @endforelse
             </tbody>
         </table>
     </div>

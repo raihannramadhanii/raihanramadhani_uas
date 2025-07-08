@@ -24,6 +24,7 @@
     />
     <!-- Custom CSS -->
     <link href="{{asset('/dist/css/style.min.css')}}" rel="stylesheet" />
+    <link href={{ asset('css/app.css') }} rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -570,5 +571,6 @@
     <script src="{{asset('/dist/js/sidebarmenu.js')}}"></script>
     <!--Custom JavaScript -->
     <script src="{{asset('/dist/js/custom.min.js')}}"></script>
+    <script src="{{asset('js/all.js')}}"> </script>
   </body>
 </html>
