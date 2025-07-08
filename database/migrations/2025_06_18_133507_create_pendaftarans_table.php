@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nm_pendaftar');
             $table->string('al_pendaftar');
             $table->string('hp_pendaftar');
-
             $table->timestamps();
         });
     }
