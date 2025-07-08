@@ -23,14 +23,14 @@
     </div>
 
     <div class="card-body">
-        <table class="table table-bordered table-hover">
-            <thead class="table-dark">
+        <table class="table table-bordered table-hover" >
+            <thead class="table-light">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">No HP</th>
-                    <th scope="col" class="text-end">Aksi</th>
+                    <th scope="col"><b>#</b></th>
+                    <th scope="col"><b>Nama</b></th>
+                    <th scope="col"><b>Alamat</b></th>
+                    <th scope="col"><b>No HP</b></th>
+                    <th scope="col" class="text-end"><b>Action</b></th>
                 </tr>
             </thead>
             <tbody>
