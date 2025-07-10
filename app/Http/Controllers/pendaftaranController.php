@@ -12,7 +12,7 @@ class pendaftaranController extends Controller
      */
     public function index()
     {
-        //menampilkan data dosen
+        //menampilkan data pendaftar
         $nomor = 1;
         $pendaftaran = Pendaftaran::all();
         return view('pendaftaran.index',compact('pendaftaran','nomor'));

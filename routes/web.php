@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pendaftaranController;
+use App\Http\Controllers\penitipanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,12 @@ Route::post('/pendaftaran', [pendaftaranController::class, 'store']);
 Route::get('/pendaftaran/edit/{id}', [pendaftaranController::class, 'edit'])->name('pendaftaran.edit');
 Route::put('/pendaftaran/{id}', [pendaftaranController::class, 'update']);
 Route::delete('/pendaftaran/{id}', [pendaftaranController::class, 'destroy']);
+
+// Data Penitipan
+Route::get('/penitipan', [penitipanController::class, 'index']);
+Route::get('/penitipan/tambah', [penitipanController::class, 'create']);
+Route::post('/penitipan', [penitipanController::class, 'store']);
+Route::get('/penitipan/edit/{id}', [penitipanController::class, 'edit'])->name('penitipan.edit');
+Route::put('/penitipan/{id}', [penitipanController::class, 'update']);
+Route::delete('/penitipan/{id}', [penitipanController::class, 'destroy']);
+
