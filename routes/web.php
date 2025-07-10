@@ -34,6 +34,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/pendaftaran', [pendaftaranController::class, 'index']);
 Route::get('/pendaftaran/tambah', [pendaftaranController::class, 'create']);
 Route::post('/pendaftaran', [pendaftaranController::class, 'store']);
-Route::get('/pendaftaran/edit/{id}', [pendaftaranController::class, 'edit']);
+Route::get('/pendaftaran/edit/{id}', [pendaftaranController::class, 'edit'])->name('pendaftaran.edit');
 Route::put('/pendaftaran/{id}', [pendaftaranController::class, 'update']);
 Route::delete('/pendaftaran/{id}', [pendaftaranController::class, 'destroy']);

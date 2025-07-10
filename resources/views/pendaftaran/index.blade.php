@@ -45,12 +45,14 @@
                     <td>Mibo</td>
                     <td>098765</td> --}}
                     <td class="text-end">
-                        <a href="{{ url('/pendaftaran') }}" class="btn btn-warning btn-sm">
+                        {{-- <a href="{{ url('/pendaftaran') }}" class="btn btn-warning btn-sm">
                             <i class="fa fa-circle-info"></i>
+                        </a> --}}
+                        <a href="{{ route('pendaftaran.edit', $data->id) }}" class="btn btn-success btn-sm">
+                            <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a>
-                        <a href="{{ url('/pendaftaran/edit') }}" class="btn btn-info btn-sm">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
+
+
 
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">
@@ -70,11 +72,13 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                        <form action="{{ url('/pendaftaran' )}}" method="POST">
+                                        <form action="{{ url('/pendaftaran/' . $data->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Hapus</button>
                                         </form>
+
+
                                     </div>
                                 </div>
                             </div>

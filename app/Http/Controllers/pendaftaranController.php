@@ -55,10 +55,10 @@ class pendaftaranController extends Controller
      */
     public function edit(string $id)
     {
-        //form edit
         $pendaftaran = Pendaftaran::find($id);
-        return view('Pendaftaran.edit',compact('pendaftaran'));
+        return view('Pendaftaran.edit', compact('pendaftaran'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -81,10 +81,9 @@ class pendaftaranController extends Controller
      */
     public function destroy(string $id)
     {
-        //proses hapus
         $pendaftaran = Pendaftaran::find($id);
         $pendaftaran->delete();
-
         return redirect('/pendaftaran');
     }
+
 }
