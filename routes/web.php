@@ -22,9 +22,9 @@ Route::get('/home', function () {
     return view('home');
 })->middleware('auth');
 
-Route::get('/t', function () {
-    return view('pendaftaran.index');
-});
+// Route::get('/t', function () {
+//     return view('pendaftaran.index');
+// });
 
 Auth::routes();
 

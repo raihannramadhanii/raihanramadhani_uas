@@ -407,7 +407,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="charts.html"
+                  href="/pendaftaran"
                   aria-expanded="false"
                   ><i class="mdi mdi-chart-bar"></i
                   ><span class="hide-menu">Pendaftaran</span></a
