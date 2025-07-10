@@ -425,7 +425,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="tables.html"
+                  href="/penjualan"
                   aria-expanded="false"
                   ><i class="mdi mdi-border-inside"></i
                   ><span class="hide-menu">Penjualan</span></a

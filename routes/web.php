@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pendaftaranController;
 use App\Http\Controllers\penitipanController;
+use App\Http\Controllers\penjualanController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -46,4 +48,12 @@ Route::post('/penitipan', [penitipanController::class, 'store']);
 Route::get('/penitipan/edit/{id}', [penitipanController::class, 'edit'])->name('penitipan.edit');
 Route::put('/penitipan/{id}', [penitipanController::class, 'update']);
 Route::delete('/penitipan/{id}', [penitipanController::class, 'destroy']);
+
+// Data Penjualan
+Route::get('/penjualan', [penjualanController::class, 'index']);
+Route::get('/penjualan/tambah', [penjualanController::class, 'create']);
+Route::post('/penjualan', [penjualanController::class, 'store']);
+Route::get('/penjualan/edit/{id}', [penjualanController::class, 'edit'])->name('penitipan.edit');
+Route::put('/penjualan/{id}', [penjualanController::class, 'update']);
+Route::delete('/penjualan/{id}', [penjualanController::class, 'destroy']);
 
