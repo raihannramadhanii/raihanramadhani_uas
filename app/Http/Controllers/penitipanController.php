@@ -24,7 +24,7 @@ class penitipanController extends Controller
     public function create()
     {
         //menampilkan form tambah
-        return view('Penitipan.tambah');
+        return view('penitipan.tambah');
     }
 
     /**
