@@ -24,7 +24,7 @@ class penitipanController extends Controller
     public function create()
     {
         //menampilkan form tambah
-        return view('penitipan.tambah');
+        return view('Penitipan.tambah');
     }
 
     /**
@@ -64,8 +64,8 @@ class penitipanController extends Controller
     public function update(Request $request, string $id)
     {
         //proses edit
-        $penitipan = Pendaftaran::find($id);
-        $penitipan->alamat = $request->alamat;
+        $penitipan = Penitipan::find($id);
+        $penitipan->jumlah = $request->jumlah;
         $penitipan->kd_makanan = $request->kd_makanan;
         $penitipan->save();
 
