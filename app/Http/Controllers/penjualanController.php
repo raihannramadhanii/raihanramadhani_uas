@@ -35,6 +35,7 @@ class penjualanController extends Controller
         //proses tambah
         $penjualan = new Penjualan;
         $penjualan->kd_penjualan = $request->kd_penjualan;
+        $penjualan->penitipans_id = $request->penitipan;
         $penjualan->tgl_transaksi = $request->tgl_transaksi;
         $penjualan->jml_penjualan = $request->jml_penjualan;
         $penjualan->save();

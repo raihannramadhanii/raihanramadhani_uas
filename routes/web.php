@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pendaftaranController;
 use App\Http\Controllers\penitipanController;
 use App\Http\Controllers\penjualanController;
+use App\Http\Controllers\makananController;
 
 
 /*
@@ -56,4 +57,12 @@ Route::post('/penjualan', [penjualanController::class, 'store']);
 Route::get('/penjualan/edit/{id}', [penjualanController::class, 'edit'])->name('penitipan.edit');
 Route::put('/penjualan/{id}', [penjualanController::class, 'update']);
 Route::delete('/penjualan/{id}', [penjualanController::class, 'destroy']);
+
+// Data Makanan
+Route::get('/makanan', [makananController::class, 'index']);
+Route::get('/makanan/tambah', [makananController::class, 'create']);
+Route::post('/makanan', [makananController::class, 'store']);
+Route::get('/makanan/edit/{id}', [makananController::class, 'edit'])->name('makanan.edit');
+Route::put('/makanan/{id}', [makananController::class, 'update']);
+Route::delete('/makanan/{id}', [makananController::class, 'destroy']);
 

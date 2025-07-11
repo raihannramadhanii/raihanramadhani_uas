@@ -434,7 +434,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="grid.html"
+                  href="/makanan"
                   aria-expanded="false"
                   ><i class="mdi mdi-blur-linear"></i
                   ><span class="hide-menu">Makanan</span></a
