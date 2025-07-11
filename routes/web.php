@@ -5,6 +5,8 @@ use App\Http\Controllers\pendaftaranController;
 use App\Http\Controllers\penitipanController;
 use App\Http\Controllers\penjualanController;
 use App\Http\Controllers\makananController;
+use App\Http\Controllers\pembayaranController;
+
 
 
 /*
@@ -65,4 +67,12 @@ Route::post('/makanan', [makananController::class, 'store']);
 Route::get('/makanan/edit/{id}', [makananController::class, 'edit'])->name('makanan.edit');
 Route::put('/makanan/{id}', [makananController::class, 'update']);
 Route::delete('/makanan/{id}', [makananController::class, 'destroy']);
+
+// Data Pembayaran
+Route::get('/pembayaran', [pembayaranController::class, 'index']);
+Route::get('/pembayaran/tambah', [pembayaranController::class, 'create']);
+Route::post('/pembayaran', [pembayaranController::class, 'store']);
+Route::get('/pembayaran/edit/{id}', [pembayaranController::class, 'edit'])->name('pembayaran.edit');
+Route::put('/pembayaran/{id}', [pembayaranController::class, 'update']);
+Route::delete('/pembayaran/{id}', [pembayaranController::class, 'destroy']);
 
