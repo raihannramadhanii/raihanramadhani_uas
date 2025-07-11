@@ -37,8 +37,9 @@ class penjualanController extends Controller
         $penjualan->kd_penjualan = $request->kd_penjualan;
         $penjualan->tgl_transaksi = $request->tgl_transaksi;
         $penjualan->jml_penjualan = $request->jml_penjualan;
-
         $penjualan->save();
+
+        return redirect('/penjualan');
     }
 
     /**
