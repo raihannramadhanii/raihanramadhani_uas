@@ -22,7 +22,7 @@
                             <label for="exampleInputPassword1" class="form-label">Dosen Pembimbing</label>
                             <select name="pembayaran" id="" class="form-control">
                                 <option value="">-Pilih Dosen Pembimbing-</option>
-                
+
                                     <option value="transfer">Transfer</option>
                                     <option value="qris">Qris</option>
                                     <option value="qris">Tunai</option>
