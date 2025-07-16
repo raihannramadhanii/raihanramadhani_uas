@@ -38,6 +38,7 @@
                 <tr>
                     <th scope="row">{{ $index + 1 }}</th>
                     <td>{{ $data->kd_penjualan }}</td>
+                    <td>{{ $data->penitipans->id_penitipan }}</td>
                     <td>{{ $data->tgl_transaksi }}</td>
                     <td>{{ $data->jml_penjualan }}</td>
 
@@ -60,7 +61,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Yakin ingin menghapus data penjualan <strong></strong>?
+                                        Yakin ingin menghapus data penjualan <strong>{{ $data->penitipans->id_penitipan }}</strong>?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Penjualan;
+use App\Models\Penitipan; 
+
 
 class penjualanController extends Controller
 {
@@ -24,7 +26,8 @@ class penjualanController extends Controller
     public function create()
     {
         //menampilkan form tambah
-        return view('Penjualan.tambah');
+        $penitipan = Penitipan::all();
+        return view('penjualan.tambah', compact('pasien'));
     }
 
     /**
@@ -57,7 +60,8 @@ class penjualanController extends Controller
     public function edit(string $id)
     {
          $penjualan = Penjualan::find($id);
-        return view('Penjualan.edit', compact('penjualan'));
+         $penitipans = Penitipan::all();
+        return view('Penjualan.edit', compact('penjualan','penitipans'));
     }
 
     /**
@@ -68,11 +72,12 @@ class penjualanController extends Controller
         //proses edit
         $penjualan = Penjualan::find($id);
         $penjualan->kd_penjualan = $request->kd_penjualan;
+        $penjualan->penitipans_id = $request->penitipans_id;
         $penjualan->tgl_transaksi = $request->tgl_transaksi;
         $penjualan->jml_penjualan = $request->jml_penjualan;
         $penjualan->save();
 
-        return redirect('/penjualan');
+        return redirect('/penjualan')->with('success', 'Penjualan berhasil diupdate.');
 
     }
 
