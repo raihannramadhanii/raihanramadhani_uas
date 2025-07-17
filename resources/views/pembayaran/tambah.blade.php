@@ -34,8 +34,14 @@
                                 <option value="">-Pilih Metode Pembayaran-</option>
 
                                     <option value="transfer">Transfer</option>
-                                    <option value="qris">Qris</option>
-                                    <option value="qris">Tunai</option>
+                                    <option value="qris">QRIS</option>
+                                    <option value="tunai">Tunai</option>
+                                    <option value="debit">Kartu Debit</option>
+                                    <option value="ewallet">E-Wallet (OVO, Dana, Gopay, dll)</option>
+                                    <option value="virtual_account">Virtual Account</option>
+                                    <option value="internet_banking">Internet Banking</option>
+                                    <option value="lainnya">Lainnya</option>
+
 
 
                             </select>
