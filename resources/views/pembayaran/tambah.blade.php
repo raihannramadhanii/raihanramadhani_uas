@@ -30,7 +30,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Jenis Pembayaran</label>
-                            <select name="pembayaran" id="" class="form-control">
+                            <select name="jns_pembayaran" class="form-control">
                                 <option value="">-Pilih Metode Pembayaran-</option>
 
                                     <option value="transfer">Transfer</option>
