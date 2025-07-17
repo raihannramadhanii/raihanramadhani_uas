@@ -56,7 +56,7 @@ Route::delete('/penitipan/{id}', [penitipanController::class, 'destroy']);
 Route::get('/penjualan', [penjualanController::class, 'index']);
 Route::get('/penjualan/tambah', [penjualanController::class, 'create']);
 Route::post('/penjualan', [penjualanController::class, 'store']);
-Route::get('/penjualan/edit/{id}', [penjualanController::class, 'edit'])->name('penitipan.edit');
+Route::get('/penjualan/edit/{id}', [penjualanController::class, 'edit'])->name('penjualan.edit');
 Route::put('/penjualan/{id}', [penjualanController::class, 'update']);
 Route::delete('/penjualan/{id}', [penjualanController::class, 'destroy']);
 

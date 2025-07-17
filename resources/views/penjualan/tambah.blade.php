@@ -15,15 +15,15 @@
                             <input type="text" name="kd_penjualan" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Id Penitipan</label>
-                            <select name="penitipan" id="" class="form-control">
-                                <option value="">-- Pilih Penitipan --</option>
-                                @foreach ($penitipan as $item)
-                                    <option value="{{ $item->id }}">{{ $item->id_penitipan }}</option>
+                                    <label for="exampleInputPassword1" class="form-label">Id Penitipan</label>
+                                    <select name="penitipans_id" class="form-control">
+                                        <option value="">-Pilih-</option>
+                                        @foreach ($penitipans as $item1)
+                                            <option value="{{ $item1->id }}">{{ $item1->id_penitipan }}</option>
+                                        @endforeach
+                                    </select>
 
-                                @endforeach
-                            </select>
-                        </div>
+                                </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Tanggal Transaksi</label>
                             <input type="date" name="tgl_transaksi" class="form-control" id="exampleInputPassword1">

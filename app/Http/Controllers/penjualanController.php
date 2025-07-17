@@ -26,8 +26,8 @@ class penjualanController extends Controller
     public function create()
     {
         //menampilkan form tambah
-        $penitipan = Penitipan::all();
-        return view('penjualan.tambah',compact('penitipan'));
+        $penitipans = Penitipan::all();
+        return view('penjualan.tambah',compact('penitipans'));
     }
 
     /**
@@ -38,7 +38,7 @@ class penjualanController extends Controller
         //proses tambah
         $penjualan = new Penjualan;
         $penjualan->kd_penjualan = $request->kd_penjualan;
-        $penjualan->penitipans_id = $request->penitipan;
+        $penjualan->penitipans_id = $request->penitipans_id;
         $penjualan->tgl_transaksi = $request->tgl_transaksi;
         $penjualan->jml_penjualan = $request->jml_penjualan;
 

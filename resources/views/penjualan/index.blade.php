@@ -44,7 +44,7 @@
                     <td>{{ $data->jml_penjualan }}</td>
 
                     <td class="text-end">
-                        <a href="/penjualan/edit/$data->id" class="btn btn-success btn-sm">
+                        <a href="/penjualan/edit/{{$data->id}}" class="btn btn-success btn-sm">
                             <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a>
 
