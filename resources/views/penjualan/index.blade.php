@@ -38,7 +38,7 @@
                 <tr>
                     <th scope="row">{{ $index + 1 }}</th>
                     <td>{{ $data->kd_penjualan }}</td>
-                    <td>{{ $data->penitipans->id_penitipan }}</td>
+                    <td>{{optional ($data->penitipans)->id_penitipan}}</td>
                     <td>{{ $data->tgl_transaksi }}</td>
                     <td>{{ $data->jml_penjualan }}</td>
 

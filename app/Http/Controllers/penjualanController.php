@@ -27,7 +27,7 @@ class penjualanController extends Controller
     {
         //menampilkan form tambah
         $penitipan = Penitipan::all();
-        return view('penjualan.tambah', compact('pasien'));
+        return view('penjualan.tambah', compact('penitipan'));
     }
 
     /**
