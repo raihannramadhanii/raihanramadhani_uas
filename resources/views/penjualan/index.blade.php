@@ -28,6 +28,7 @@
                 <tr>
                     <th scope="col"><b>#</b></th>
                     <th scope="col"><b>Kode Penjualan</b></th>
+                    <th scope="col"><b>Id Penitipan</b></th>
                     <th scope="col"><b>Tanggal Transaksi</b></th>
                     <th scope="col"><b>Jumlah Penjualan</b></th>
                     <th scope="col" class="text-end"><b>Action</b></th>
@@ -38,12 +39,12 @@
                 <tr>
                     <th scope="row">{{ $index + 1 }}</th>
                     <td>{{ $data->kd_penjualan }}</td>
-                    <td>{{optional ($data->penitipans)->id_penitipan}}</td>
+                    <td>{{ $data->penitipans->id_penitipan}}</td>
                     <td>{{ $data->tgl_transaksi }}</td>
                     <td>{{ $data->jml_penjualan }}</td>
 
                     <td class="text-end">
-                        <a href="{{ route('penjualan.edit', $data->id) }}" class="btn btn-success btn-sm">
+                        <a href="/penjualan/edit/$data->id" class="btn btn-success btn-sm">
                             <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a>
 

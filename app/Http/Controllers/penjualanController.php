@@ -17,7 +17,7 @@ class penjualanController extends Controller
         //menampilkan data penjualan
         $nomor = 1;
         $penjualan = Penjualan::all();
-        return view('penjualan.index',compact('penjualan','nomor'));
+        return view('penjualan.index',compact('penjualan'));
     }
 
     /**
@@ -27,7 +27,7 @@ class penjualanController extends Controller
     {
         //menampilkan form tambah
         $penitipan = Penitipan::all();
-        return view('penjualan.tambah', compact('penitipan'));
+        return view('penjualan.tambah',compact('penitipan'));
     }
 
     /**
@@ -41,6 +41,7 @@ class penjualanController extends Controller
         $penjualan->penitipans_id = $request->penitipan;
         $penjualan->tgl_transaksi = $request->tgl_transaksi;
         $penjualan->jml_penjualan = $request->jml_penjualan;
+
         $penjualan->save();
 
         return redirect('/penjualan');
@@ -70,16 +71,25 @@ class penjualanController extends Controller
     public function update(Request $request, string $id)
     {
         //proses edit
-        $penjualan = Penjualan::find($id);
-        $penjualan->kd_penjualan = $request->kd_penjualan;
-        $penjualan->penitipans_id = $request->penitipans_id;
-        $penjualan->tgl_transaksi = $request->tgl_transaksi;
-        $penjualan->jml_penjualan = $request->jml_penjualan;
-        $penjualan->save();
+         $request->validate([
+        'kd_penjualan' => 'required',
+        'penitipans_id' => 'required',
+        'tgl_transaksi' => 'required',
+        'jml_penjualan' => 'required',
+    ]);
 
-        return redirect('/penjualan')->with('success', 'Penjualan berhasil diupdate.');
+    $penjualan = Penjualan::findOrFail($id);
 
+    $penjualan->kd_penjualan = $request->kd_penjualan;
+    $penjualan->penitipans_id = $request->penitipans_id;
+    $penjualan->tgl_transaksi = $request->tgl_transaksi;
+    $penjualan->jml_penjualan = $request->jml_penjualan;
+
+    $penjualan->save();
+
+    return redirect('/penjualan')->with('success', 'Data penjualan berhasil diupdate.');
     }
+
 
     /**
      * Remove the specified resource from storage.

@@ -15,11 +15,11 @@
                             <input type="text" name="kd_penjualan" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
-                            <label for="pelanggans_id" class="form-label">Id Penitipan</label>
-                            <select name="penitipans_id" id="penitipans_id" class="form-control">
-                                <option value="">-- Pilih Penitapan --</option>
+                            <label for="exampleInputPassword1" class="form-label">Id Penitipan</label>
+                            <select name="penitipan" id="" class="form-control">
+                                <option value="">-- Pilih Penitipan --</option>
                                 @foreach ($penitipan as $item)
-                                    <option value="{{ $item->id }}">{{ $item->jumlah }}</option>
+                                    <option value="{{ $item->id }}">{{ $item->id_penitipan }}</option>
 
                                 @endforeach
                             </select>
