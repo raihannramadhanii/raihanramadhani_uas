@@ -36,6 +36,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// Data Beranda
+Route::get('/beranda', [berandaController::class, 'index']);
+
 // Data Pendaftaran
 Route::get('/pendaftaran', [pendaftaranController::class, 'index']);
 Route::get('/pendaftaran/tambah', [pendaftaranController::class, 'create']);

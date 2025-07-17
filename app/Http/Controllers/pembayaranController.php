@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pembayaran;
+use App\Models\Penjualan;
+
 
 
 class pembayaranController extends Controller
@@ -25,7 +27,8 @@ class pembayaranController extends Controller
     public function create()
     {
         //menampilkan form tambah
-        return view('Pembayaran.tambah');
+        $penjualans = Penjualan::all();
+        return view('pembayaran.tambah',compact('penjualans'));
     }
 
     /**
@@ -36,8 +39,10 @@ class pembayaranController extends Controller
         //proses tambah
         $pembayaran = new Pembayaran;
         $pembayaran->kd_pembayaran = $request->kd_pembayaran;
-        $pendaftaran->total_pembayaran = $request->total_pembayaran;
-        $pendaftaran->jns_pembayaran = $request->jns_pembayaran;
+        $pembayaran->penjualans_id = $request->penjualans_id;
+        $pembayaran->total_pembayaran = $request->total_pembayaran;
+        $pembayaran->jns_pembayaran = $request->jns_pembayaran;
+
         $pembayaran->save();
 
         return redirect('/pembayaran');
@@ -56,8 +61,9 @@ class pembayaranController extends Controller
      */
     public function edit(string $id)
     {
-        $pembayaran= Pembayaran::find($id);
-        return view('Pembayaran.edit', compact('$pembayaran'));
+        $pembayaran = Pembayaran::find($id);
+        $penjualans = Penjualan::all();
+        return view('Pembayaran.edit', compact('pembayaran','penjualans'));
     }
 
     /**
@@ -66,13 +72,23 @@ class pembayaranController extends Controller
     public function update(Request $request, string $id)
     {
         //proses edit
-        $pembayaran = Makanan::find($id);
-        $pembayaran->kd_pembayaran = $request->kd_pembayaran;
-        $pembayaran->total_pembayaran = $request->total_pembayaran;
-        $pembayaran->jns_pembayaran = $request->jns_pembayaran;
-        $pembayaran->save();
+        $request->validate([
+        'kd_pembayaran' => 'required',
+        'penjualans_id' => 'required',
+        'total_pembayaran' => 'required',
+        'jns_pembayaran' => 'required',
+    ]);
 
-        return redirect('/pembayaran');
+    $pembayaran = Pembayaran::findOrFail($id);
+
+    $pembayaran->kd_pembayaran = $request->kd_pembayaran;
+    $pembayaran->penjualans_id = $request->penjualans_id;
+    $pembayaran->total_pembayaran = $request->total_pembayaran;
+    $pembayaran->jns_pembayaran = $request->jns_pembayaran;
+
+    $pembayaran->save();
+
+    return redirect('/pembayaran')->with('success', 'Data pembayaran berhasil diupdate.');
     }
 
     /**

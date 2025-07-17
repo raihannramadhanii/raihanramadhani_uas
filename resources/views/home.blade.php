@@ -1,6 +1,7 @@
 @extends('layouts.template')
+
 @section('title')
-    Halaman Dashboard
+    Dashboard
 @endsection
 
 @section('headline')
@@ -8,20 +9,31 @@
 @endsection
 
 @section('content')
- <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">Selamat Datang, Admin 👋</h1>
+        <p class="text-muted fs-5">Semoga harimu menyenangkan dan penuh semangat 🌼</p>
+    </div>
 
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="p-4 bg-light rounded shadow-sm text-center">
+                <h5 class="text-secondary">Total Penjualan</h5>
+                <h2 class="fw-bold text-success">120</h2>
+            </div>
         </div>
-        <div class="card-body">
-          Selamat Datang Admin, semoga harimu menyenangkan
+        <div class="col-md-4">
+            <div class="p-4 bg-light rounded shadow-sm text-center">
+                <h5 class="text-secondary">Jumlah Penitipan</h5>
+                <h2 class="fw-bold text-info">35</h2>
+            </div>
         </div>
+        <div class="col-md-4">
+            <div class="p-4 bg-light rounded shadow-sm text-center">
+                <h5 class="text-secondary">Admin Aktif</h5>
+                <h2 class="fw-bold text-warning">1</h2>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

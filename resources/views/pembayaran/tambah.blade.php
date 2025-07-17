@@ -15,13 +15,23 @@
                             <input type="text" name="kd_pembayaran" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Kode Penjualan</label>
+                                    <select name="penjualans_id" class="form-control">
+                                        <option value="">-Pilih-</option>
+                                        @foreach ($penjualans as $item1)
+                                            <option value="{{ $item1->id }}">{{ $item1->kd_penjualan }}</option>
+                                        @endforeach
+                                    </select>
+
+                                </div>
+                        <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Total Pembayaran</label>
                             <input type="text" name="total_pembayaran" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Dosen Pembimbing</label>
+                            <label for="exampleInputPassword1" class="form-label">Jenis Pembayaran</label>
                             <select name="pembayaran" id="" class="form-control">
-                                <option value="">-Pilih Dosen Pembimbing-</option>
+                                <option value="">-Pilih Metode Pembayaran-</option>
 
                                     <option value="transfer">Transfer</option>
                                     <option value="qris">Qris</option>

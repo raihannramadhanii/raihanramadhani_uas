@@ -28,6 +28,7 @@
                 <tr>
                     <th scope="col"><b>#</b></th>
                     <th scope="col"><b>Kode Pembayaran</b></th>
+                    <th scope="col"><b>Kode Penjualan</b></th>
                     <th scope="col"><b>Total Pembayaran</b></th>
                     <th scope="col"><b>Jenis Pembayaran</b></th>
                     <th scope="col" class="text-end"><b>Action</b></th>
@@ -38,6 +39,7 @@
                 <tr>
                     <th scope="row">{{ $index + 1 }}</th>
                     <td>{{ $data->kd_pembayaran }}</td>
+                    <td>{{ $data->penjualans->kd_penjualan}}</td>
                     <td>{{ $data->total_pembayaran }}</td>
                     <td>{{ $data->jns_pembayaran }}</td>
                     {{-- <td>1</td>
@@ -68,7 +70,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Yakin ingin menghapus data pembayaran <strong></strong>?
+                                        Yakin ingin menghapus data pembayaran <strong>{{ $data->penjualans->kd_penjualan }}</strong>?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
