@@ -16,7 +16,7 @@
                         </div>
                         <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Kode Penjualan</label>
-                                    <select name="penjualans_id" class="form-control">
+                                    <select name="penjualans" class="form-control">
                                         <option value="">-Pilih-</option>
                                         @foreach ($penjualans as $item1)
                                             <option value="{{ $item1->id }}">{{ $item1->kd_penjualan }}</option>
@@ -29,10 +29,9 @@
                             <input type="text" name="total_pembayaran" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Jenis Pembayaran</label>
+                            <label for="jns_pembayaran" class="form-label">Jenis Pembayaran</label>
                             <select name="jns_pembayaran" class="form-control">
-                                <option value="">-Pilih Metode Pembayaran-</option>
-
+                                <option value="jns_pembayaran">-Pilih Metode Pembayaran-</option>
                                     <option value="transfer">Transfer</option>
                                     <option value="qris">QRIS</option>
                                     <option value="tunai">Tunai</option>
